@@ -132,6 +132,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public void associateConnection(Object connection) throws ResourceException {
 
         this.connection = connection;
@@ -148,6 +149,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public void cleanup() throws ResourceException {
 
     }
@@ -161,6 +163,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public void destroy() throws ResourceException {
 
         this.connection = null;
@@ -242,6 +245,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public void setLogWriter(PrintWriter out) throws ResourceException {
 
         this.logWriter = out;
@@ -259,6 +263,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public LocalTransaction getLocalTransaction() throws ResourceException {
 
         throw new NotSupportedException("LocalTransaction not supported");
@@ -292,6 +297,7 @@ public class RAManagedConnection implements ManagedConnection {
      * @throws ResourceException generic exception if operation fails
      *
      */
+    @Override
     public ManagedConnectionMetaData getMetaData() throws ResourceException {
 
         return new RAManagedConnectionMetaData();

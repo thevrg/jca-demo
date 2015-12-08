@@ -27,6 +27,7 @@ public interface RAConnection extends AutoCloseable {
      * Close
      *
      */
+    @Override
     public void close();
 
 }
