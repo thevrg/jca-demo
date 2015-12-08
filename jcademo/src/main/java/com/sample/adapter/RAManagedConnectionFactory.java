@@ -43,7 +43,7 @@ public class RAManagedConnectionFactory
     private static Logger log = Logger.getLogger("RAManagedConnectionFactory");
     
     private String name;
-    private String host;
+    private String host = "localhost";
     private Integer port;
 
     /**
@@ -80,11 +80,6 @@ public class RAManagedConnectionFactory
 
     public String getHost() {
         return host;
-    }
-
-    @ConfigProperty(defaultValue = "localhost")
-    public void setHost(String host) {
-        this.host = host;
     }
 
     public Integer getPort() {
